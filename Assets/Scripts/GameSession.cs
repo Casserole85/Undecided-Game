@@ -147,36 +147,12 @@ public class GameSession : MonoBehaviour {
 
         inventory = FindObjectOfType<Inventory>();
 
-        //slots = new List<GameObject> { slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8, slot9, slot10, slot11, slot12, slot13, slot14, slot15, slot16, slot17, slot18, slot19, slot20 }; 
-            
+
         for (int i = 0; i < numofslots; i++)
         {
                 slots[i] = GameObject.Find("ItemSlot" + (i + 1).ToString("00"));
             Debug.Log("ItemSlot" + (i+ 1).ToString("00"));
         }
-  
-        /*
-        slot1 = GameObject.Find("ItemSlot01");//-------finding slots
-        slot2 = GameObject.Find("ItemSlot02");
-        slot3 = GameObject.Find("ItemSlot03");
-        slot4 = GameObject.Find("ItemSlot04");
-        slot5 = GameObject.Find("ItemSlot05");
-        slot6 = GameObject.Find("ItemSlot06");
-        slot7 = GameObject.Find("ItemSlot07");
-        slot8 = GameObject.Find("ItemSlot08");
-        slot9 = GameObject.Find("ItemSlot09");
-        slot10 = GameObject.Find("ItemSlot10");
-        slot11 = GameObject.Find("ItemSlot11");
-        slot12 = GameObject.Find("ItemSlot12");
-        slot13 = GameObject.Find("ItemSlot13");
-        slot14 = GameObject.Find("ItemSlot14");
-        slot15 = GameObject.Find("ItemSlot15");
-        slot16 = GameObject.Find("ItemSlot16");
-        slot17 = GameObject.Find("ItemSlot17");
-        slot18 = GameObject.Find("ItemSlot18");
-        slot19 = GameObject.Find("ItemSlot19");
-        slot20 = GameObject.Find("ItemSlot20");
-        */
         Applylistposition();
         Seeinventorylist();
 

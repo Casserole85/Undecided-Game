@@ -108,8 +108,8 @@ public class Inventory : MonoBehaviour
     //-----------------------------------------------------sorting out mouse coords
     Vector3 correctingmousecoords(Vector3 coords)
     {
-        var X = (coords.x * 103) + 765;
-        var Y = (coords.y * 103) + 415;
+        var X = (coords.x * 200);
+        var Y = (coords.y);
         Vector3 newmouse = new Vector3(X, Y, coords.z);
         return newmouse;
     }

@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     //----------------------------------------------------
 
     //------------------------------------------deciding type of player controller
+    public bool Allowmovement = true;
     [SerializeField] bool ControlFlat;
     //--------------------------------------------------------
 	
@@ -56,10 +57,14 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Walk();//-----side on walk mechanic
-        WALK();//-----topdown walk mechanic
-        Flip();//-----side on flipping character
-        Jump();//-----side on jumping mechanic
+        if (Allowmovement)
+        {
+            Walk();//-----side on walk mechanic
+            WALK();//-----topdown walk mechanic
+            Flip();//-----side on flipping character
+            Jump();//-----side on jumping mechanic
+        }
+       
     }
 
 
