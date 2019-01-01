@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameSession : MonoBehaviour
 {
 
-
+    public int currentDay;
 
     //------------------------constantly changing to spawn player
     public Vector2 SpawningCoords;
@@ -30,23 +30,11 @@ public class GameSession : MonoBehaviour
     public int speed;
     //---------------------------------
 
-    //-------------------------physical inventory slots
-
-
     //----------------------------inventory animators
     Animator InventoryAnimator;
     Animator StatsAnimator;
     //-----------------------------------
-
-
-
-
-
-
-
-
-
-
+    
     //==============================================================================================================================================================
 
     //--------------------------------singleton pattern
@@ -65,9 +53,6 @@ public class GameSession : MonoBehaviour
     }
     //-----------------------------------------
 
-
-
-
     private void Update()
     {
 
@@ -75,20 +60,12 @@ public class GameSession : MonoBehaviour
 
     //-------------------------------------------------------FUNCTIONs
 
-
-    //-------------------------------------------------------
-
-
-
-
-
     //--------------------------------------------on every level loaded
     private void OnLevelWasLoaded()
     {
 
         InventoryAnimator = Inventory.instance.GetComponent<Animator>();
         StatsAnimator = GameObject.Find("Stats").GetComponent<Animator>();
-
 
     }
 }

@@ -33,10 +33,6 @@ public class Player : MonoBehaviour
     [SerializeField] bool ControlFlat;
     //--------------------------------------------------------
 	
-
-
-
-
     //==============================================================================================================================================================
 
 	void Start()
@@ -49,8 +45,7 @@ public class Player : MonoBehaviour
 
         transform.position = Gamesesh.SpawningCoords;//---------every time player created apply spawning coords
         
-
-
+        
         decidingtypeofcontroller();//---------------if TOPDOWN present set player controller
     }
 
@@ -66,8 +61,6 @@ public class Player : MonoBehaviour
         }
        
     }
-
-
 
     //---------------------------------------------------------------------FUNCTIONS
 

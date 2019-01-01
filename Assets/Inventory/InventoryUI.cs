@@ -9,6 +9,7 @@ public class InventoryUI : MonoBehaviour
     public Transform itemsParent;
     public TMP_Text moneyText;
     public GameObject dropButton;
+    public GameObject inventoryUI;
 
     SlotUI[] slots;
     List<Slot> items;
@@ -26,8 +27,17 @@ public class InventoryUI : MonoBehaviour
 
         slots = itemsParent.GetComponentsInChildren<SlotUI>();
         dropButton.SetActive(false);
+        inventoryUI.SetActive(false);
     }
-    
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Inventory"))
+        {
+            inventoryUI.SetActive(!inventoryUI.activeSelf);
+        }
+    }
+
     void UpdateUI()
     {
         for (int i = 0; i < items.Count; i++ )
@@ -58,13 +68,9 @@ public class InventoryUI : MonoBehaviour
         //    moveItem(selectedSlot, pos);
         //}
 
+        selectedSlot.changeColor(false);
         selectedSlot = slot;
         
-        foreach (SlotUI s in slots)
-        {
-            s.changeColor(false);
-        }
-
         selectedSlot.changeColor(true);
         dropButton.SetActive(true);
     }

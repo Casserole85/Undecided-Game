@@ -128,6 +128,7 @@ MonoBehaviour:
   stacker: {fileID: 2785370871208631812}
   buttonImage: {fileID: 6124659117048826262}
   stackText: {fileID: 5265182490380519986}
+  item: {fileID: 0}
 --- !u!1 &6124659117048826261
 GameObject:
   m_ObjectHideFlags: 0

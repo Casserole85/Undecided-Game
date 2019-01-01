@@ -119,10 +119,10 @@ public class Inventory : MonoBehaviour
 
     public void Remove(int pos)
     {
-        Debug.Log("items = " + string.Join("",items.ConvertAll(i => i.item.name.ToString()).ToArray()));
+       
         Slot slotToRemove = findItem(pos);
         items.Remove(slotToRemove);
-        Debug.Log("items = " + string.Join("", items.ConvertAll(i => i.ToString()).ToArray()));
+        
         if (onItemChangedCallback != null)
         {
             onItemChangedCallback.Invoke();
