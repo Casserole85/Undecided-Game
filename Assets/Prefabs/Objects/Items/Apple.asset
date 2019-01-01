@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Apple
   desc: A regular apple.
   icon: {fileID: 21300000, guid: bc16bd8c7944f4f04b275b60b5adce12, type: 3}
-  maxStack: 10
+  maxStack: 6
   buyValue: 2
   sellValue: 1
   healthRegen: 5
